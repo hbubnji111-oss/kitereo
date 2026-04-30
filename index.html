@@ -1364,7 +1364,7 @@ footer {
           </div>
         </div>
       </div>
-      <div class="about-visual reveal">
+      <div class="about-visual reveal" id="showreelBlock">
         <div class="about-visual-tag">In Motion</div>
         <div class="about-visual-label">Showreel '25</div>
       </div>
@@ -1420,59 +1420,7 @@ footer {
       </div>
     </div>
 
-    <div class="cases-grid reveal">
-      <a href="#" class="case">
-        <div class="case-image">
-          <div class="case-image-content">music video</div>
-        </div>
-        <div class="case-arrow">↗</div>
-        <div class="case-meta">
-          <span class="tag" data-i18n="case1.tag">Video</span>
-          <span>2025</span>
-        </div>
-        <h3 data-i18n="case1.title">Brand 01 — Music Video</h3>
-        <p class="case-desc" data-i18n="case1.desc">Music video for a Serbian artist, 2M views in a week</p>
-      </a>
-
-      <a href="#" class="case">
-        <div class="case-image">
-          <div class="case-image-content">performance</div>
-        </div>
-        <div class="case-arrow">↗</div>
-        <div class="case-meta">
-          <span class="tag" data-i18n="case2.tag">Advertising</span>
-          <span>2025</span>
-        </div>
-        <h3 data-i18n="case2.title">Brand 02 — Performance</h3>
-        <p class="case-desc" data-i18n="case2.desc">Campaign launch in 5 countries in 30 days, ROAS x4.2</p>
-      </a>
-
-      <a href="#" class="case">
-        <div class="case-image">
-          <div class="case-image-content">rebrand</div>
-        </div>
-        <div class="case-arrow">↗</div>
-        <div class="case-meta">
-          <span class="tag" data-i18n="case3.tag">Website + Branding</span>
-          <span>2024</span>
-        </div>
-        <h3 data-i18n="case3.title">Brand 03 — Rebrand</h3>
-        <p class="case-desc" data-i18n="case3.desc">Full rebrand and new website for a fintech startup</p>
-      </a>
-
-      <a href="#" class="case">
-        <div class="case-image">
-          <div class="case-image-content">content</div>
-        </div>
-        <div class="case-arrow">↗</div>
-        <div class="case-meta">
-          <span class="tag" data-i18n="case4.tag">Content</span>
-          <span>2024</span>
-        </div>
-        <h3 data-i18n="case4.title">Brand 04 — Content</h3>
-        <p class="case-desc" data-i18n="case4.desc">120 pieces of social media content in one quarter</p>
-      </a>
-    </div>
+    <div class="cases-grid reveal" id="casesGrid"></div>
 
     <div class="cases-cta reveal">
       <a href="#" class="btn btn-ghost"><span data-i18n="cases.all">All work</span> <span class="arrow">→</span></a>
@@ -1483,24 +1431,7 @@ footer {
 <!-- CLIENTS -->
 <div class="clients">
   <div class="clients-eyebrow" data-i18n="clients.eyebrow">Trusted by</div>
-  <div class="clients-track">
-    <span class="client-logo">Aurora Records</span>
-    <span class="client-logo">Meridian Co.</span>
-    <span class="client-logo">Velvet Studio</span>
-    <span class="client-logo">North Bureau</span>
-    <span class="client-logo">Atlas Brands</span>
-    <span class="client-logo">Linea Coffee</span>
-    <span class="client-logo">Hyperion</span>
-    <span class="client-logo">Studio Forma</span>
-    <span class="client-logo">Aurora Records</span>
-    <span class="client-logo">Meridian Co.</span>
-    <span class="client-logo">Velvet Studio</span>
-    <span class="client-logo">North Bureau</span>
-    <span class="client-logo">Atlas Brands</span>
-    <span class="client-logo">Linea Coffee</span>
-    <span class="client-logo">Hyperion</span>
-    <span class="client-logo">Studio Forma</span>
-  </div>
+  <div class="clients-track" id="clientsTrack"></div>
 </div>
 
 <!-- TESTIMONIALS -->
@@ -1510,41 +1441,7 @@ footer {
       <div class="eyebrow" data-i18n="testimonials.eyebrow">05 — Testimonials</div>
       <h2 data-i18n-html="testimonials.headline">What <em>clients say.</em></h2>
     </div>
-    <div class="testimonials-grid reveal">
-      <div class="testimonial">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text" data-i18n="t1.text">KITEREO did what three previous agencies couldn't. The campaign paid off in the first month.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">A</div>
-          <div class="testimonial-meta">
-            <div class="testimonial-name">Anna K.</div>
-            <div class="testimonial-role" data-i18n="t1.role">CMO · Brand Name</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text" data-i18n="t2.text">They produced a video that got 2 million views in a week. True professionals.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">M</div>
-          <div class="testimonial-meta">
-            <div class="testimonial-name">Marko D.</div>
-            <div class="testimonial-role" data-i18n="t2.role">Artist</div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text" data-i18n="t3.text">Rare case when an agency understands business, not just design.</p>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">S</div>
-          <div class="testimonial-meta">
-            <div class="testimonial-name">Stefan P.</div>
-            <div class="testimonial-role" data-i18n="t3.role">CEO · Brand Name</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="testimonials-grid reveal" id="testimonialsGrid"></div>
   </div>
 </section>
 
@@ -1556,28 +1453,7 @@ footer {
       <h2 data-i18n-html="team.headline">People <em>behind the brand.</em></h2>
       <p data-i18n="team.desc">A small team of specialists with experience in international projects.</p>
     </div>
-    <div class="team-grid reveal">
-      <div class="team-member">
-        <div class="member-photo"><span class="member-initial">A</span></div>
-        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
-        <div class="member-role">Founder & Creative Dir.</div>
-      </div>
-      <div class="team-member">
-        <div class="member-photo"><span class="member-initial">M</span></div>
-        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
-        <div class="member-role">Head of Production</div>
-      </div>
-      <div class="team-member">
-        <div class="member-photo"><span class="member-initial">S</span></div>
-        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
-        <div class="member-role">Performance Lead</div>
-      </div>
-      <div class="team-member">
-        <div class="member-photo"><span class="member-initial">D</span></div>
-        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
-        <div class="member-role">Design Lead</div>
-      </div>
-    </div>
+    <div class="team-grid reveal" id="teamGrid"></div>
   </div>
 </section>
 
@@ -1771,16 +1647,11 @@ footer {
       <div class="footer-col">
         <h4 data-i18n="footer.contact">Contact</h4>
         <ul>
-          <li><a href="mailto:kitereoagency@gmail.com">kitereoagency@gmail.com</a></li>
-          <li><a href="#" data-i18n="footer.telegram">Telegram</a></li>
-          <li><a href="#" data-i18n="footer.whatsapp">WhatsApp</a></li>
+          <li><a id="footer-email" href="mailto:kitereoagency@gmail.com">kitereoagency@gmail.com</a></li>
+          <li><a id="footer-telegram" href="#" data-i18n="footer.telegram">Telegram</a></li>
+          <li><a id="footer-whatsapp" href="#" data-i18n="footer.whatsapp">WhatsApp</a></li>
         </ul>
-        <div class="footer-social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="Behance"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h6c2 0 3 1 3 2.5S11 11 9 11H3zM3 11h6c2 0 3.5 1 3.5 3s-1.5 3-3.5 3H3zM15 8h6M15 14c0-2 1.5-3 3-3s3 1 3 3h-6c0 2 1 3 3 3 1.5 0 2.5-.5 3-1.5"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 1 1 4 0v4M11 13v4"/></svg></a>
-        </div>
+        <div class="footer-social" id="footerSocial"></div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -1797,6 +1668,7 @@ footer {
   <span data-i18n="sticky.contact">Contact</span>
 </a>
 
+<script src="content.js"></script>
 <script>
 // ── i18n translations ──────────────────────────────────────────────────────
 const translations = {
@@ -2064,6 +1936,159 @@ const translations = {
 
 let currentLang = localStorage.getItem('lang') || 'en';
 
+// ── Render: Team ──────────────────────────────────────────────────────────
+function renderTeam() {
+  const grid = document.getElementById('teamGrid');
+  if (!grid) return;
+  const count = SITE_CONTENT.team.length;
+  // Авто-колонки: 1 чел = 1 колонка, 2 = 2, 3+ = 3 или 4
+  const cols = count === 1 ? 1 : count === 2 ? 2 : count === 3 ? 3 : 4;
+  grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+  grid.innerHTML = SITE_CONTENT.team.map(m => `
+    <div class="team-member">
+      <div class="member-photo"><span class="member-initial">${m.initial}</span></div>
+      <div class="member-name">${currentLang === 'ru' ? m.nameRu : m.nameEn}</div>
+      <div class="member-role">${m.role}</div>
+    </div>
+  `).join('');
+}
+
+// ── Render: Clients ticker ────────────────────────────────────────────────
+function renderClients() {
+  const track = document.getElementById('clientsTrack');
+  if (!track) return;
+  // дублируем список для бесшовной анимации
+  const items = [...SITE_CONTENT.clients, ...SITE_CONTENT.clients];
+  track.innerHTML = items.map(name => `<span class="client-logo">${name}</span>`).join('');
+}
+
+// ── Render: Cases ─────────────────────────────────────────────────────────
+function renderCases() {
+  const grid = document.getElementById('casesGrid');
+  if (!grid) return;
+  grid.innerHTML = SITE_CONTENT.cases.map((c, i) => {
+    const gradients = ['--gx:70%;--gy:30%', '--gx:20%;--gy:80%', '--gx:80%;--gy:80%', '--gx:30%;--gy:30%'];
+    const gStyle = gradients[i % gradients.length];
+    const imageInner = c.imageUrl
+      ? `<img src="${c.imageUrl}" alt="${currentLang === 'ru' ? c.titleRu : c.titleEn}" style="width:100%;height:100%;object-fit:cover;">`
+      : `<div class="case-image-content">${currentLang === 'ru' ? c.titleRu : c.titleEn}</div>`;
+    return `
+      <a href="${c.link}" class="case">
+        <div class="case-image" style="${gStyle}">
+          ${imageInner}
+        </div>
+        <div class="case-arrow">↗</div>
+        <div class="case-meta">
+          <span class="tag">${currentLang === 'ru' ? c.tagRu : c.tagEn}</span>
+          <span>${c.year}</span>
+        </div>
+        <h3>${currentLang === 'ru' ? c.titleRu : c.titleEn}</h3>
+        <p class="case-desc">${currentLang === 'ru' ? c.descRu : c.descEn}</p>
+      </a>
+    `;
+  }).join('');
+}
+
+// ── Render: Testimonials ──────────────────────────────────────────────────
+function renderTestimonials() {
+  const grid = document.getElementById('testimonialsGrid');
+  if (!grid) return;
+  grid.innerHTML = SITE_CONTENT.testimonials.map(t => `
+    <div class="testimonial">
+      <div class="testimonial-quote-mark">"</div>
+      <p class="testimonial-text">${currentLang === 'ru' ? t.textRu : t.textEn}</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">${t.initial}</div>
+        <div class="testimonial-meta">
+          <div class="testimonial-name">${t.name}</div>
+          <div class="testimonial-role">${currentLang === 'ru' ? t.roleRu : t.roleEn}</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+// ── Render: Showreel ──────────────────────────────────────────────────────
+function extractYoutubeId(url) {
+  const m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([^&?/\s]{11})/);
+  return m ? m[1] : null;
+}
+
+function renderShowreel() {
+  const block = document.getElementById('showreelBlock');
+  if (!block) return;
+  if (!SITE_CONTENT.showreel.show) {
+    block.style.display = 'none';
+    return;
+  }
+  block.style.display = '';
+  const url = SITE_CONTENT.showreel.youtubeUrl;
+  if (url) {
+    const vid = extractYoutubeId(url);
+    if (vid) {
+      block.style.aspectRatio = '16/9';
+      block.innerHTML = `<iframe src="https://www.youtube.com/embed/${vid}?rel=0" style="position:absolute;inset:0;width:100%;height:100%;border:none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      block.style.position = 'relative';
+      return;
+    }
+  }
+  // Заглушка "Скоро"
+  block.style.aspectRatio = '4/5';
+  block.innerHTML = `
+    <div class="about-visual-tag">In Motion</div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+      <div style="font-family:var(--font-display);font-style:italic;font-size:clamp(40px,5vw,72px);color:rgba(245,245,240,0.15);letter-spacing:-0.02em;">${currentLang === 'ru' ? 'Скоро' : 'Coming soon'}</div>
+    </div>
+    <div class="about-visual-label">Showreel '25</div>
+  `;
+}
+
+// ── Render: Socials & contacts ────────────────────────────────────────────
+function renderSocials() {
+  const svgs = {
+    instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>`,
+    behance:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h6c2 0 3 1 3 2.5S11 11 9 11H3zM3 11h6c2 0 3.5 1 3.5 3s-1.5 3-3.5 3H3zM15 8h6M15 14c0-2 1.5-3 3-3s3 1 3 3h-6c0 2 1 3 3 3 1.5 0 2.5-.5 3-1.5"/></svg>`,
+    youtube:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="3"/><path d="m10 9 5 3-5 3z" fill="currentColor"/></svg>`,
+    linkedin:  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 1 1 4 0v4M11 13v4"/></svg>`,
+  };
+  const container = document.getElementById('footerSocial');
+  if (container) {
+    container.innerHTML = Object.entries(SITE_CONTENT.socials)
+      .filter(([, url]) => url)
+      .map(([name, url]) => `<a href="${url}" aria-label="${name}" target="_blank" rel="noopener">${svgs[name] || ''}</a>`)
+      .join('');
+  }
+  const emailEl = document.getElementById('footer-email');
+  if (emailEl && SITE_CONTENT.contacts.email) {
+    emailEl.href = 'mailto:' + SITE_CONTENT.contacts.email;
+    emailEl.textContent = SITE_CONTENT.contacts.email;
+  }
+  const tgEl = document.getElementById('footer-telegram');
+  if (tgEl) {
+    if (SITE_CONTENT.contacts.telegram) {
+      tgEl.href = SITE_CONTENT.contacts.telegram;
+      tgEl.style.display = '';
+    } else {
+      tgEl.style.display = 'none';
+    }
+  }
+  const waEl = document.getElementById('footer-whatsapp');
+  if (waEl) {
+    if (SITE_CONTENT.contacts.whatsapp) {
+      waEl.href = SITE_CONTENT.contacts.whatsapp;
+      waEl.style.display = '';
+    } else {
+      waEl.style.display = 'none';
+    }
+  }
+  // Alt contact email in form
+  const altEmail = document.querySelector('.alt-contacts a');
+  if (altEmail && SITE_CONTENT.contacts.email) {
+    altEmail.href = 'mailto:' + SITE_CONTENT.contacts.email;
+    altEmail.textContent = SITE_CONTENT.contacts.email;
+  }
+}
+
 function switchLang(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
@@ -2102,9 +2127,17 @@ function switchLang(lang) {
   // Update lang switch button active state
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+
+  // Re-render dynamic sections
+  renderTeam();
+  renderCases();
+  renderTestimonials();
+  renderShowreel();
 }
 
 // Apply saved or default language on load
+renderClients();
+renderSocials();
 switchLang(currentLang);
 
 // ── Header scroll ──────────────────────────────────────────────────────────
@@ -2191,7 +2224,11 @@ document.querySelectorAll('.stats').forEach(s => statObserver.observe(s));
 // ── Contact form ──────────────────────────────────────────────────────────
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  alert(translations[currentLang]['form.alert']);
+  const email = SITE_CONTENT.contacts.email;
+  const msg = currentLang === 'ru'
+    ? `Спасибо! Форма заработает после деплоя. Напишите нам напрямую: ${email}`
+    : `Thank you! The form will be connected after deployment. Please email us directly at ${email}`;
+  alert(msg);
 });
 </script>
 
