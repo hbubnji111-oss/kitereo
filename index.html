@@ -1977,13 +1977,17 @@ function renderCases() {
 
     // Видео имеет приоритет над фото
     const ytId = c.videoUrl ? extractYoutubeId(c.videoUrl) : null;
+    const isFileVideo = !ytId && c.videoUrl && /\.(mp4|webm|ogg)(\?|$)/i.test(c.videoUrl);
     const imgSrc = ytId
       ? `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`
       : resolveImageUrl(c.imageUrl);
-    const href = c.videoUrl || c.link || '#';
+    const href = (ytId ? c.videoUrl : null) || c.link || '#';
 
     let imageInner;
-    if (imgSrc) {
+    if (isFileVideo) {
+      // Свой видеофайл — зацикленное автовоспроизведение без звука
+      imageInner = `<video src="${c.videoUrl}" autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>`;
+    } else if (imgSrc) {
       imageInner = `<img src="${imgSrc}" alt="${title}" style="width:100%;height:100%;object-fit:cover;">`;
       if (ytId) {
         imageInner += `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
@@ -1997,7 +2001,7 @@ function renderCases() {
     }
 
     return `
-      <a href="${href}" class="case" ${c.videoUrl ? 'target="_blank" rel="noopener"' : ''}>
+      <a href="${href}" class="case" ${ytId ? 'target="_blank" rel="noopener"' : ''}>
         <div class="case-image" style="${gStyle}">
           ${imageInner}
         </div>
@@ -2046,6 +2050,15 @@ function renderShowreel() {
     return;
   }
   block.style.display = '';
+  // Приоритет 1: свой видеофайл (mp4/webm) — зацикленное автовоспроизведение
+  const fileUrl = SITE_CONTENT.showreel.videoFileUrl;
+  if (fileUrl && /\.(mp4|webm|ogg)(\?|$)/i.test(fileUrl)) {
+    block.style.aspectRatio = '4/5';
+    block.style.position = 'relative';
+    block.innerHTML = `<video src="${fileUrl}" autoplay loop muted playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"></video>`;
+    return;
+  }
+  // Приоритет 2: YouTube
   const url = SITE_CONTENT.showreel.youtubeUrl;
   if (url) {
     const vid = extractYoutubeId(url);
