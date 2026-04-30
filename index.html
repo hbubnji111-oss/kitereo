@@ -1952,6 +1952,20 @@ function renderClients() {
   track.innerHTML = items.map(name => `<span class="client-logo">${name}</span>`).join('');
 }
 
+// ── Image URL helper (Google Drive и другие носители) ─────────────────────
+function resolveImageUrl(url) {
+  if (!url) return '';
+  // Google Drive: https://drive.google.com/file/d/FILE_ID/view
+  // → конвертируем в прямую ссылку на изображение
+  const gdrive = url.match(/drive\.google\.com\/file\/d\/([^/]+)/);
+  if (gdrive) return `https://drive.google.com/uc?export=view&id=${gdrive[1]}`;
+  // Google Drive open: https://drive.google.com/open?id=FILE_ID
+  const gdriveOpen = url.match(/drive\.google\.com\/open\?id=([^&]+)/);
+  if (gdriveOpen) return `https://drive.google.com/uc?export=view&id=${gdriveOpen[1]}`;
+  // Уже прямая ссылка или локальный путь — возвращаем как есть
+  return url;
+}
+
 // ── Render: Cases ─────────────────────────────────────────────────────────
 function renderCases() {
   const grid = document.getElementById('casesGrid');
@@ -1959,8 +1973,9 @@ function renderCases() {
   grid.innerHTML = SITE_CONTENT.cases.map((c, i) => {
     const gradients = ['--gx:70%;--gy:30%', '--gx:20%;--gy:80%', '--gx:80%;--gy:80%', '--gx:30%;--gy:30%'];
     const gStyle = gradients[i % gradients.length];
-    const imageInner = c.imageUrl
-      ? `<img src="${c.imageUrl}" alt="${currentLang === 'ru' ? c.titleRu : c.titleEn}" style="width:100%;height:100%;object-fit:cover;">`
+    const imgSrc = resolveImageUrl(c.imageUrl);
+    const imageInner = imgSrc
+      ? `<img src="${imgSrc}" alt="${currentLang === 'ru' ? c.titleRu : c.titleEn}" style="width:100%;height:100%;object-fit:cover;">`
       : `<div class="case-image-content">${currentLang === 'ru' ? c.titleRu : c.titleEn}</div>`;
     return `
       <a href="${c.link}" class="case">
