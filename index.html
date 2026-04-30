@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>KITEREO — Digital, который продаёт</title>
-<meta name="description" content="Digital-агентство полного цикла. Видео, реклама, дизайн, сайты для брендов, которые хотят расти." />
+<title>KITEREO — Digital that sells</title>
+<meta name="description" content="Full-cycle digital agency. Video, advertising, design, websites for brands that want to grow." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1197,6 +1197,7 @@ footer {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
+
 @media (max-width: 640px) {
   .header-right .btn { display: none; }
   .services-grid { grid-template-columns: 1fr; }
@@ -1220,19 +1221,19 @@ footer {
   <div class="header-inner">
     <a href="#" class="logo">KITEREO</a>
     <nav class="nav">
-      <a href="#services">Услуги</a>
-      <a href="#cases">Работы</a>
-      <a href="#about">О нас</a>
-      <a href="#contact">Контакты</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#cases" data-i18n="nav.work">Work</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-right">
       <div class="lang-switch">
-        <button class="active">RU</button>
+        <button id="btn-en" class="active" onclick="switchLang('en')">EN</button>
         <span class="sep">/</span>
-        <button>EN</button>
+        <button id="btn-ru" onclick="switchLang('ru')">RU</button>
       </div>
       <a href="#contact" class="btn btn-primary">
-        <span>Обсудить проект</span>
+        <span data-i18n="header.cta">Discuss project</span>
       </a>
     </div>
   </div>
@@ -1241,23 +1242,23 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">KITEREO · Digital Agency · Est. 2022</div>
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">KITEREO · Digital Agency · Est. 2022</div>
     <h1>
-      <span class="line">Digital,</span>
-      <span class="line">который продаёт.</span>
+      <span class="line" data-i18n="hero.line1">Digital,</span>
+      <span class="line" data-i18n="hero.line2">that sells.</span>
     </h1>
-    <p class="hero-subtitle">Видео, реклама, дизайн и сайты для брендов, которые хотят расти. Под одной крышей — без компромиссов.</p>
+    <p class="hero-subtitle" data-i18n="hero.subtitle">Video, advertising, design and websites for brands that want to grow. Under one roof — no compromises.</p>
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary"><span>Обсудить проект</span> <span class="arrow">→</span></a>
-      <a href="#cases" class="btn btn-ghost"><span>Смотреть работы</span></a>
-      <span class="hero-cta-note">Ответим в течение 24 часов</span>
+      <a href="#contact" class="btn btn-primary"><span data-i18n="hero.cta.primary">Discuss project</span> <span class="arrow">→</span></a>
+      <a href="#cases" class="btn btn-ghost"><span data-i18n="hero.cta.ghost">See our work</span></a>
+      <span class="hero-cta-note" data-i18n="hero.cta.note">Response within 24 hours</span>
     </div>
   </div>
   <div class="hero-bottom">
     <div class="hero-meta">
-      <span><strong>50+</strong> &nbsp; проектов</span>
-      <span><strong>8</strong> &nbsp; стран</span>
-      <span><strong>24/7</strong> &nbsp; на связи</span>
+      <span><strong>50+</strong> &nbsp; <span data-i18n="hero.stat.projects">projects</span></span>
+      <span><strong>8</strong> &nbsp; <span data-i18n="hero.stat.countries">countries</span></span>
+      <span><strong>24/7</strong> &nbsp; <span data-i18n="hero.stat.available">available</span></span>
     </div>
     <div class="scroll-indicator">
       <span>Scroll</span>
@@ -1269,8 +1270,8 @@ footer {
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
-    <span>Видео</span><span>Реклама</span><span>Дизайн</span><span>Сайты</span><span>Бренды</span><span>Контент</span><span>Стратегия</span>
-    <span>Видео</span><span>Реклама</span><span>Дизайн</span><span>Сайты</span><span>Бренды</span><span>Контент</span><span>Стратегия</span>
+    <span data-i18n="ticker.1">Video</span><span data-i18n="ticker.2">Advertising</span><span data-i18n="ticker.3">Design</span><span data-i18n="ticker.4">Websites</span><span data-i18n="ticker.5">Brands</span><span data-i18n="ticker.6">Content</span><span data-i18n="ticker.7">Strategy</span>
+    <span data-i18n="ticker.1">Video</span><span data-i18n="ticker.2">Advertising</span><span data-i18n="ticker.3">Design</span><span data-i18n="ticker.4">Websites</span><span data-i18n="ticker.5">Brands</span><span data-i18n="ticker.6">Content</span><span data-i18n="ticker.7">Strategy</span>
   </div>
 </div>
 
@@ -1278,60 +1279,60 @@ footer {
 <section class="services" id="services">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">01 — Услуги</div>
-      <h2>Полный цикл <em>для вашего бренда.</em></h2>
-      <p>Мы закрываем все задачи digital — от первой идеи до запуска рекламной кампании. Вам не нужны несколько подрядчиков.</p>
+      <div class="eyebrow" data-i18n="services.eyebrow">01 — Services</div>
+      <h2 data-i18n-html="services.headline">Full cycle <em>for your brand.</em></h2>
+      <p data-i18n="services.desc">We cover all digital tasks — from the first idea to launching an ad campaign. You don't need multiple contractors.</p>
     </div>
 
     <div class="services-grid reveal">
       <div class="service s-1">
         <div class="service-num">/01</div>
         <svg class="service-icon" viewBox="0 0 24 24"><rect x="3" y="6" width="14" height="12" rx="1"/><path d="m17 10 4-2v8l-4-2"/></svg>
-        <h3>Видео и кино</h3>
-        <p>Клипы, короткометражки, рекламные ролики и видео для брендов. От сценария до финального монтажа.</p>
+        <h3 data-i18n="s1.title">Video & Film</h3>
+        <p data-i18n="s1.desc">Music videos, short films, commercials and brand videos. From script to final edit.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-2">
         <div class="service-num">/02</div>
         <svg class="service-icon" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12h2v6H7zM11 8h2v10h-2zM15 14h2v4h-2z"/></svg>
-        <h3>Контент для соцсетей</h3>
-        <p>Reels, Shorts, TikTok, вертикальные видео. Контент, который растит охваты и продажи.</p>
+        <h3 data-i18n="s2.title">Social Media Content</h3>
+        <p data-i18n="s2.desc">Reels, Shorts, TikTok, vertical videos. Content that grows reach and sales.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-3">
         <div class="service-num">/03</div>
         <svg class="service-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>
-        <h3>Таргетированная реклама</h3>
-        <p>Meta, Google, TikTok, Яндекс. Запускаем кампании в России, Европе и за их пределами.</p>
+        <h3 data-i18n="s3.title">Targeted Advertising</h3>
+        <p data-i18n="s3.desc">Meta, Google, TikTok, Yandex. We run campaigns in Russia, Europe and beyond.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-4">
         <div class="service-num">/04</div>
         <svg class="service-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="1"/><path d="M3 8h18M8 14h2"/></svg>
-        <h3>Сайты</h3>
-        <p>Лендинги и многостраничные сайты на Tilda и Webflow.</p>
+        <h3 data-i18n="s4.title">Websites</h3>
+        <p data-i18n="s4.desc">Landing pages and multi-page websites on Tilda and Webflow.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-5">
         <div class="service-num">/05</div>
         <svg class="service-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
-        <h3>Логотипы и брендинг</h3>
-        <p>Айдентика, которая работает: логотип, стиль, гайдлайны.</p>
+        <h3 data-i18n="s5.title">Logos & Branding</h3>
+        <p data-i18n="s5.desc">Identity that works: logo, style, brand guidelines.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-6">
         <div class="service-num">/06</div>
         <svg class="service-icon" viewBox="0 0 24 24"><path d="m3 7 9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
-        <h3>Графический дизайн</h3>
-        <p>Баннеры, презентации, упаковка, social media kit.</p>
+        <h3 data-i18n="s6.title">Graphic Design</h3>
+        <p data-i18n="s6.desc">Banners, presentations, packaging, social media kit.</p>
         <span class="service-arrow">→</span>
       </div>
       <div class="service s-7">
         <div class="service-num">/07</div>
         <svg class="service-icon" viewBox="0 0 24 24" stroke="white"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-        <h3>Не знаете с чего начать?</h3>
-        <p>Назначим бесплатную 30-минутную консультацию. Поможем составить план и оценить бюджет.</p>
-        <span class="service-cta">Записаться <span class="arrow">→</span></span>
+        <h3 data-i18n="s7.title">Not sure where to start?</h3>
+        <p data-i18n="s7.desc">Book a free 30-minute consultation. We'll help you create a plan and estimate your budget.</p>
+        <span class="service-cta"><span data-i18n="s7.cta">Book a call</span> <span class="arrow">→</span></span>
       </div>
     </div>
   </div>
@@ -1341,25 +1342,25 @@ footer {
 <section class="about" id="about">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">02 — О нас</div>
+      <div class="eyebrow" data-i18n="about.eyebrow">02 — About</div>
     </div>
     <div class="about-grid">
       <div class="about-text reveal">
-        <h2>Мы делаем digital,<br>который <em>чувствуется.</em></h2>
-        <p>KITEREO — независимое digital-агентство с фокусом на бренды Восточной и Центральной Европы. Мы работали с проектами в Боснии, Сербии, Словении, Словакии, Румынии, России, а также с заказчиками из Швейцарии, Израиля и США.</p>
-        <p>Мы не делаем массово. Мы выбираем проекты, в которые верим — и доводим их до результата. Каждый кадр, каждый клик, каждый пиксель — на своём месте.</p>
+        <h2 data-i18n-html="about.headline">We make digital<br>that <em>feels.</em></h2>
+        <p data-i18n="about.para1">KITEREO is an independent digital agency focused on brands in Eastern and Central Europe. We've worked with projects in Bosnia, Serbia, Slovenia, Slovakia, Romania, Russia, and with clients from Switzerland, Israel and the USA.</p>
+        <p data-i18n="about.para2">We don't work in bulk. We choose projects we believe in — and drive them to results. Every frame, every click, every pixel — in its place.</p>
         <div class="stats">
           <div class="stat">
             <div class="stat-num">50+</div>
-            <div class="stat-label">Реализованных проектов</div>
+            <div class="stat-label" data-i18n="about.stat1.label">Projects delivered</div>
           </div>
           <div class="stat">
             <div class="stat-num">8</div>
-            <div class="stat-label">Стран присутствия</div>
+            <div class="stat-label" data-i18n="about.stat2.label">Countries</div>
           </div>
           <div class="stat">
             <div class="stat-num">24/7</div>
-            <div class="stat-label">На связи с клиентами</div>
+            <div class="stat-label" data-i18n="about.stat3.label">Available</div>
           </div>
         </div>
       </div>
@@ -1375,35 +1376,35 @@ footer {
 <section class="process">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">03 — Подход</div>
-      <h2>Как <em>мы работаем.</em></h2>
-      <p>Прозрачный процесс из 5 шагов. Никаких сюрпризов в счёте или в дедлайне.</p>
+      <div class="eyebrow" data-i18n="process.eyebrow">03 — Approach</div>
+      <h2 data-i18n-html="process.headline">How <em>we work.</em></h2>
+      <p data-i18n="process.desc">A transparent 5-step process. No surprises in the invoice or the deadline.</p>
     </div>
     <div class="process-steps reveal">
       <div class="step">
         <div class="step-num">01 Step</div>
-        <h3>Бриф</h3>
-        <p>Знакомимся, обсуждаем задачу, цели и ожидания. Бесплатно.</p>
+        <h3 data-i18n="step1.title">Brief</h3>
+        <p data-i18n="step1.desc">We meet, discuss the task, goals and expectations. Free of charge.</p>
       </div>
       <div class="step">
         <div class="step-num">02 Step</div>
-        <h3>Стратегия</h3>
-        <p>Готовим концепцию, план работ, смету и сроки. Согласовываем.</p>
+        <h3 data-i18n="step2.title">Strategy</h3>
+        <p data-i18n="step2.desc">We prepare the concept, work plan, budget and timeline. We align.</p>
       </div>
       <div class="step">
         <div class="step-num">03 Step</div>
-        <h3>Производство</h3>
-        <p>Снимаем, дизайним, кодим, запускаем рекламу. Держим вас в курсе.</p>
+        <h3 data-i18n="step3.title">Production</h3>
+        <p data-i18n="step3.desc">We shoot, design, code, launch campaigns. We keep you informed.</p>
       </div>
       <div class="step">
         <div class="step-num">04 Step</div>
-        <h3>Запуск</h3>
-        <p>Финальные правки, тестирование, релиз. Проверяем, что всё работает.</p>
+        <h3 data-i18n="step4.title">Launch</h3>
+        <p data-i18n="step4.desc">Final revisions, testing, release. We make sure everything works.</p>
       </div>
       <div class="step">
         <div class="step-num">05 Step</div>
-        <h3>Результат</h3>
-        <p>Отчёт, аналитика, рекомендации. Обсуждаем дальнейшие шаги.</p>
+        <h3 data-i18n="step5.title">Results</h3>
+        <p data-i18n="step5.desc">Report, analytics, recommendations. We discuss next steps.</p>
       </div>
     </div>
   </div>
@@ -1414,8 +1415,8 @@ footer {
   <div class="container">
     <div class="cases-head reveal">
       <div>
-        <div class="eyebrow">04 — Работы</div>
-        <h2 style="font-family: var(--font-display); font-weight: 400; font-size: clamp(36px, 5.5vw, 80px); line-height: 1; letter-spacing: -0.025em; margin-top: 24px;">Избранные <em style="font-style: italic; color: transparent; -webkit-text-stroke: 1px var(--text);">проекты.</em></h2>
+        <div class="eyebrow" data-i18n="cases.eyebrow">04 — Work</div>
+        <h2 style="font-family: var(--font-display); font-weight: 400; font-size: clamp(36px, 5.5vw, 80px); line-height: 1; letter-spacing: -0.025em; margin-top: 24px;" data-i18n-html="cases.headline">Selected <em style="font-style: italic; color: transparent; -webkit-text-stroke: 1px var(--text);">projects.</em></h2>
       </div>
     </div>
 
@@ -1426,11 +1427,11 @@ footer {
         </div>
         <div class="case-arrow">↗</div>
         <div class="case-meta">
-          <span class="tag">Видео</span>
+          <span class="tag" data-i18n="case1.tag">Video</span>
           <span>2025</span>
         </div>
-        <h3>Brand 01 — Music Video</h3>
-        <p class="case-desc">Музыкальный клип для артиста из Сербии, 2 млн просмотров за неделю</p>
+        <h3 data-i18n="case1.title">Brand 01 — Music Video</h3>
+        <p class="case-desc" data-i18n="case1.desc">Music video for a Serbian artist, 2M views in a week</p>
       </a>
 
       <a href="#" class="case">
@@ -1439,11 +1440,11 @@ footer {
         </div>
         <div class="case-arrow">↗</div>
         <div class="case-meta">
-          <span class="tag">Реклама</span>
+          <span class="tag" data-i18n="case2.tag">Advertising</span>
           <span>2025</span>
         </div>
-        <h3>Brand 02 — Performance</h3>
-        <p class="case-desc">Запуск кампании в 5 странах за 30 дней, ROAS x4.2</p>
+        <h3 data-i18n="case2.title">Brand 02 — Performance</h3>
+        <p class="case-desc" data-i18n="case2.desc">Campaign launch in 5 countries in 30 days, ROAS x4.2</p>
       </a>
 
       <a href="#" class="case">
@@ -1452,11 +1453,11 @@ footer {
         </div>
         <div class="case-arrow">↗</div>
         <div class="case-meta">
-          <span class="tag">Сайт + Брендинг</span>
+          <span class="tag" data-i18n="case3.tag">Website + Branding</span>
           <span>2024</span>
         </div>
-        <h3>Brand 03 — Rebrand</h3>
-        <p class="case-desc">Полный ребрендинг и новый сайт для финтех-стартапа</p>
+        <h3 data-i18n="case3.title">Brand 03 — Rebrand</h3>
+        <p class="case-desc" data-i18n="case3.desc">Full rebrand and new website for a fintech startup</p>
       </a>
 
       <a href="#" class="case">
@@ -1465,23 +1466,23 @@ footer {
         </div>
         <div class="case-arrow">↗</div>
         <div class="case-meta">
-          <span class="tag">Контент</span>
+          <span class="tag" data-i18n="case4.tag">Content</span>
           <span>2024</span>
         </div>
-        <h3>Brand 04 — Content</h3>
-        <p class="case-desc">120 единиц контента для соцсетей за квартал</p>
+        <h3 data-i18n="case4.title">Brand 04 — Content</h3>
+        <p class="case-desc" data-i18n="case4.desc">120 pieces of social media content in one quarter</p>
       </a>
     </div>
 
     <div class="cases-cta reveal">
-      <a href="#" class="btn btn-ghost"><span>Все работы</span> <span class="arrow">→</span></a>
+      <a href="#" class="btn btn-ghost"><span data-i18n="cases.all">All work</span> <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
 <!-- CLIENTS -->
 <div class="clients">
-  <div class="clients-eyebrow">Нам доверяют</div>
+  <div class="clients-eyebrow" data-i18n="clients.eyebrow">Trusted by</div>
   <div class="clients-track">
     <span class="client-logo">Aurora Records</span>
     <span class="client-logo">Meridian Co.</span>
@@ -1506,40 +1507,40 @@ footer {
 <section class="testimonials">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">05 — Отзывы</div>
-      <h2>Что <em>говорят клиенты.</em></h2>
+      <div class="eyebrow" data-i18n="testimonials.eyebrow">05 — Testimonials</div>
+      <h2 data-i18n-html="testimonials.headline">What <em>clients say.</em></h2>
     </div>
     <div class="testimonials-grid reveal">
       <div class="testimonial">
         <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text">KITEREO сделали то, что не смогли три предыдущих агентства. Кампания окупилась за первый месяц.</p>
+        <p class="testimonial-text" data-i18n="t1.text">KITEREO did what three previous agencies couldn't. The campaign paid off in the first month.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">A</div>
           <div class="testimonial-meta">
             <div class="testimonial-name">Anna K.</div>
-            <div class="testimonial-role">CMO · Brand Name</div>
+            <div class="testimonial-role" data-i18n="t1.role">CMO · Brand Name</div>
           </div>
         </div>
       </div>
       <div class="testimonial">
         <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text">Сняли клип, который собрал 2 млн просмотров за неделю. Профессионалы от и до.</p>
+        <p class="testimonial-text" data-i18n="t2.text">They produced a video that got 2 million views in a week. True professionals.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">M</div>
           <div class="testimonial-meta">
             <div class="testimonial-name">Marko D.</div>
-            <div class="testimonial-role">Артист</div>
+            <div class="testimonial-role" data-i18n="t2.role">Artist</div>
           </div>
         </div>
       </div>
       <div class="testimonial">
         <div class="testimonial-quote-mark">"</div>
-        <p class="testimonial-text">Редкий случай, когда агентство понимает бизнес, а не только дизайн.</p>
+        <p class="testimonial-text" data-i18n="t3.text">Rare case when an agency understands business, not just design.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar">S</div>
           <div class="testimonial-meta">
             <div class="testimonial-name">Stefan P.</div>
-            <div class="testimonial-role">CEO · Brand Name</div>
+            <div class="testimonial-role" data-i18n="t3.role">CEO · Brand Name</div>
           </div>
         </div>
       </div>
@@ -1551,29 +1552,29 @@ footer {
 <section class="team">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">06 — Команда</div>
-      <h2>Люди <em>за брендом.</em></h2>
-      <p>Небольшая команда специалистов с опытом работы в международных проектах.</p>
+      <div class="eyebrow" data-i18n="team.eyebrow">06 — Team</div>
+      <h2 data-i18n-html="team.headline">People <em>behind the brand.</em></h2>
+      <p data-i18n="team.desc">A small team of specialists with experience in international projects.</p>
     </div>
     <div class="team-grid reveal">
       <div class="team-member">
         <div class="member-photo"><span class="member-initial">A</span></div>
-        <div class="member-name">Имя Фамилия</div>
+        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
         <div class="member-role">Founder & Creative Dir.</div>
       </div>
       <div class="team-member">
         <div class="member-photo"><span class="member-initial">M</span></div>
-        <div class="member-name">Имя Фамилия</div>
+        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
         <div class="member-role">Head of Production</div>
       </div>
       <div class="team-member">
         <div class="member-photo"><span class="member-initial">S</span></div>
-        <div class="member-name">Имя Фамилия</div>
+        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
         <div class="member-role">Performance Lead</div>
       </div>
       <div class="team-member">
         <div class="member-photo"><span class="member-initial">D</span></div>
-        <div class="member-name">Имя Фамилия</div>
+        <div class="member-name" data-i18n="team.name.placeholder">First Last</div>
         <div class="member-role">Design Lead</div>
       </div>
     </div>
@@ -1585,10 +1586,10 @@ footer {
   <div class="container">
     <div class="geo-grid">
       <div class="geo-text reveal">
-        <div class="eyebrow">07 — География</div>
-        <h2 style="margin-top: 24px;">Работаем <em>по всему миру.</em></h2>
-        <p>Реализованные проекты в 8 странах. Команда говорит на русском, английском и сербском.</p>
-        <div class="geo-list-title">Основные рынки</div>
+        <div class="eyebrow" data-i18n="geo.eyebrow">07 — Geography</div>
+        <h2 style="margin-top: 24px;" data-i18n-html="geo.headline">We work <em>worldwide.</em></h2>
+        <p data-i18n="geo.desc">Completed projects in 8 countries. The team speaks Russian, English and Serbian.</p>
+        <div class="geo-list-title" data-i18n="geo.primary">Primary markets</div>
         <div class="geo-list">
           <span>Bosnia · Босния</span>
           <span>Serbia · Сербия</span>
@@ -1597,7 +1598,7 @@ footer {
           <span>Romania · Румыния</span>
           <span>Russia · Россия</span>
         </div>
-        <div class="geo-list-title">Дополнительно</div>
+        <div class="geo-list-title" data-i18n="geo.additional">Additional</div>
         <div class="geo-list">
           <span>Switzerland</span>
           <span>Israel</span>
@@ -1607,7 +1608,6 @@ footer {
       </div>
       <div class="geo-map reveal">
         <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-          <!-- Schematic world -->
           <g class="geo-map-line">
             <ellipse cx="200" cy="200" rx="180" ry="180" fill="none"/>
             <ellipse cx="200" cy="200" rx="120" ry="120" fill="none"/>
@@ -1615,7 +1615,6 @@ footer {
             <line x1="20" y1="200" x2="380" y2="200"/>
             <line x1="200" y1="20" x2="200" y2="380"/>
           </g>
-          <!-- Connection lines -->
           <g stroke="#6B1F2E" stroke-width="0.5" fill="none" opacity="0.6">
             <line x1="200" y1="170" x2="220" y2="160"/>
             <line x1="220" y1="160" x2="240" y2="170"/>
@@ -1624,14 +1623,11 @@ footer {
             <line x1="200" y1="170" x2="100" y2="240"/>
             <line x1="200" y1="170" x2="320" y2="200"/>
           </g>
-          <!-- Dots: countries -->
           <g>
             <circle class="geo-dot-pulse" cx="200" cy="170" r="4"/>
             <circle class="geo-dot" cx="200" cy="170" r="3"/>
-
             <circle class="geo-dot-pulse" cx="220" cy="160" r="4"/>
             <circle class="geo-dot" cx="220" cy="160" r="3"/>
-
             <circle class="geo-dot" cx="180" cy="155" r="3"/>
             <circle class="geo-dot" cx="240" cy="170" r="3"/>
             <circle class="geo-dot" cx="260" cy="180" r="3"/>
@@ -1649,41 +1645,41 @@ footer {
 <section class="faq">
   <div class="container">
     <div class="section-head reveal" style="text-align: center; margin: 0 auto 80px; align-items: center;">
-      <div class="eyebrow">10 — Вопросы</div>
-      <h2>Часто <em>спрашивают.</em></h2>
+      <div class="eyebrow" data-i18n="faq.eyebrow">10 — FAQ</div>
+      <h2 data-i18n-html="faq.headline">Frequently <em>asked.</em></h2>
     </div>
     <div class="faq-list reveal">
       <div class="faq-item">
-        <button class="faq-q">Сколько времени занимает проект? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Зависит от задачи. Лендинг — 2–3 недели. Музыкальный клип — от 3 недель до 2 месяцев. Рекламная кампания запускается за 7–14 дней. Точный срок согласуем на брифе.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q1">How long does a project take?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">Depends on the task. A landing page — 2–3 weeks. A music video — from 3 weeks to 2 months. An ad campaign launches in 7–14 days. We'll set the exact timeline at the brief.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Сколько это стоит? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Стоимость зависит от типа услуги, объёма и сроков. Используйте калькулятор или напишите нам — пришлём ориентировочный расчёт в течение 24 часов.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q2">How much does it cost?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">The cost depends on the type of service, scope and timeline. Write to us — we'll send an estimate within 24 hours.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Как происходит оплата? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Стандартная схема — 50% предоплата, 50% после сдачи. Для долгосрочных проектов — помесячная оплата. Работаем по договору с физическими и юридическими лицами в РФ и ЕС.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q3">How does payment work?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">Standard scheme — 50% upfront, 50% upon delivery. For long-term projects — monthly billing. We work under contract with individuals and companies in Russia and the EU.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Можно ли работать удалённо? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Да, 90% работы происходит онлайн. Для съёмок выезжаем в любую страну. Команда работает из нескольких точек Европы — это ускоряет процесс.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q4">Can we work remotely?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">Yes, 90% of work happens online. For shoots, we travel to any country. The team works from several locations in Europe — this speeds up the process.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">На каких языках вы работаете? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Русский, английский, сербский. Можем подключить специалистов по другим языкам — например, для локализации рекламы.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q5">What languages do you work in?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Russian, English, Serbian. We can bring in specialists for other languages — for example, for ad localization.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">У меня небольшой бюджет — стоит ли обращаться? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Стоит. Мы найдём формат, который сработает. Иногда лучше сделать одну сильную единицу контента, чем десять слабых. Напишите — обсудим возможности.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q6">I have a small budget — is it worth contacting you?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a6">Yes. We'll find a format that works. Sometimes it's better to create one strong piece of content than ten weak ones. Write to us — let's discuss the options.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Готовы подписать NDA? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Да, для всех проектов с конфиденциальной информацией. NDA подписываем на старте — до начала любых работ.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q7">Are you willing to sign an NDA?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a7">Yes, for all projects with confidential information. We sign the NDA at the start — before any work begins.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">Что нужно сделать, чтобы начать? <span class="faq-q-icon"></span></button>
-        <div class="faq-a"><div class="faq-a-inner">Напишите нам через форму ниже или сразу на email. На брифе обсудим задачу и пришлём предложение в течение 1–2 дней.</div></div>
+        <button class="faq-q"><span data-i18n="faq.q8">What do I need to do to get started?</span> <span class="faq-q-icon"></span></button>
+        <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a8">Write to us via the form below or directly by email. At the brief we'll discuss your task and send a proposal within 1–2 days.</div></div>
       </div>
     </div>
   </div>
@@ -1694,48 +1690,48 @@ footer {
   <div class="container">
     <div class="cta-grid">
       <div class="cta-text reveal">
-        <div class="eyebrow">11 — Контакты</div>
-        <h2>Готовы обсудить <em>ваш проект?</em></h2>
-        <p>Расскажите о задаче — пришлём предложение в течение 24 часов.</p>
+        <div class="eyebrow" data-i18n="contact.eyebrow">11 — Contact</div>
+        <h2 data-i18n-html="contact.headline">Ready to discuss <em>your project?</em></h2>
+        <p data-i18n="contact.desc">Tell us about your task — we'll send a proposal within 24 hours.</p>
         <div class="cta-features">
-          <span>Бесплатный бриф</span>
-          <span>Без обязательств</span>
-          <span>Ответ за 24 часа</span>
+          <span data-i18n="contact.feat1">Free brief</span>
+          <span data-i18n="contact.feat2">No obligations</span>
+          <span data-i18n="contact.feat3">Response in 24 hours</span>
         </div>
       </div>
-      <form class="cta-form reveal" onsubmit="event.preventDefault(); alert('Это превью. Форма заработает после интеграции с Tilda.');">
-        <div class="cta-form-title">Связаться с нами</div>
+      <form class="cta-form reveal" id="contactForm">
+        <div class="cta-form-title" data-i18n="form.title">Contact us</div>
         <div class="field">
-          <label>Как вас зовут?</label>
-          <input type="text" placeholder="Ваше имя" required />
+          <label data-i18n="form.name.label">What's your name?</label>
+          <input type="text" id="field-name" data-i18n-placeholder="form.name.placeholder" placeholder="Your name" required />
         </div>
         <div class="field">
-          <label>Email или Telegram</label>
-          <input type="text" placeholder="you@example.com" required />
+          <label data-i18n="form.contact.label">Email or Telegram</label>
+          <input type="text" id="field-contact" placeholder="you@example.com" required />
         </div>
         <div class="field">
-          <label>Какая услуга интересует?</label>
-          <select>
-            <option>Видео и кино</option>
-            <option>Контент для соцсетей</option>
-            <option>Таргетированная реклама</option>
-            <option>Сайты</option>
-            <option>Брендинг</option>
-            <option>Графический дизайн</option>
-            <option>Не знаю / Другое</option>
+          <label data-i18n="form.service.label">What service are you interested in?</label>
+          <select id="field-service">
+            <option data-i18n="service.opt1">Video & Film</option>
+            <option data-i18n="service.opt2">Social Media Content</option>
+            <option data-i18n="service.opt3">Targeted Advertising</option>
+            <option data-i18n="service.opt4">Websites</option>
+            <option data-i18n="service.opt5">Branding</option>
+            <option data-i18n="service.opt6">Graphic Design</option>
+            <option data-i18n="service.opt7">Don't know / Other</option>
           </select>
         </div>
         <div class="field">
-          <label>Расскажите кратко о проекте</label>
-          <textarea rows="3" placeholder="Несколько строк о задаче..."></textarea>
+          <label data-i18n="form.desc.label">Tell us briefly about your project</label>
+          <textarea rows="3" id="field-desc" data-i18n-placeholder="form.desc.placeholder" placeholder="A few lines about the task..."></textarea>
         </div>
         <label class="checkbox">
           <input type="checkbox" required />
-          <span>Согласен с обработкой персональных данных</span>
+          <span data-i18n="form.consent">I agree to the processing of personal data</span>
         </label>
-        <button type="submit" class="btn-submit">Отправить <span>→</span></button>
+        <button type="submit" class="btn-submit"><span data-i18n="form.submit">Send</span> <span>→</span></button>
         <div class="alt-contacts">
-          Или напрямую: <a href="mailto:kitereoagency@gmail.com">kitereoagency@gmail.com</a>
+          <span data-i18n="form.alt">Or directly:</span> <a href="mailto:kitereoagency@gmail.com">kitereoagency@gmail.com</a>
         </div>
       </form>
     </div>
@@ -1748,36 +1744,36 @@ footer {
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">KITEREO</div>
-        <p>Полный цикл digital. От идеи до результата.</p>
+        <p data-i18n="footer.brand.desc">Full-cycle digital. From idea to result.</p>
         <p style="font-family: var(--font-display); font-style: italic; margin-top: 12px;">Full-cycle digital. From idea to result.</p>
       </div>
       <div class="footer-col">
-        <h4>Услуги</h4>
+        <h4 data-i18n="footer.services">Services</h4>
         <ul>
-          <li><a href="#">Видео и кино</a></li>
-          <li><a href="#">Реклама</a></li>
-          <li><a href="#">Дизайн</a></li>
-          <li><a href="#">Сайты</a></li>
-          <li><a href="#">Брендинг</a></li>
-          <li><a href="#">Контент</a></li>
+          <li><a href="#" data-i18n="footer.video">Video & Film</a></li>
+          <li><a href="#" data-i18n="footer.ads">Advertising</a></li>
+          <li><a href="#" data-i18n="footer.design">Design</a></li>
+          <li><a href="#" data-i18n="footer.sites">Websites</a></li>
+          <li><a href="#" data-i18n="footer.branding">Branding</a></li>
+          <li><a href="#" data-i18n="footer.content">Content</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Компания</h4>
+        <h4 data-i18n="footer.company">Company</h4>
         <ul>
-          <li><a href="#about">О нас</a></li>
-          <li><a href="#cases">Кейсы</a></li>
-          <li><a href="#contact">Контакты</a></li>
+          <li><a href="#about" data-i18n="footer.about">About</a></li>
+          <li><a href="#cases" data-i18n="footer.cases">Cases</a></li>
+          <li><a href="#contact" data-i18n="footer.contacts">Contact</a></li>
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Cookies</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Связаться</h4>
+        <h4 data-i18n="footer.contact">Contact</h4>
         <ul>
           <li><a href="mailto:kitereoagency@gmail.com">kitereoagency@gmail.com</a></li>
-          <li><a href="#">Telegram</a></li>
-          <li><a href="#">WhatsApp</a></li>
+          <li><a href="#" data-i18n="footer.telegram">Telegram</a></li>
+          <li><a href="#" data-i18n="footer.whatsapp">WhatsApp</a></li>
         </ul>
         <div class="footer-social">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></a>
@@ -1789,7 +1785,7 @@ footer {
     </div>
     <div class="footer-bottom">
       <span>© 2026 Kitereo. All rights reserved.</span>
-      <span>RU / EN</span>
+      <span>EN / RU</span>
       <span>Made with attention to detail</span>
     </div>
   </div>
@@ -1798,11 +1794,320 @@ footer {
 <!-- STICKY CTA -->
 <a href="#contact" class="sticky-cta" id="stickyCta">
   <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 8px #4ade80;"></span>
-  <span>Связаться</span>
+  <span data-i18n="sticky.contact">Contact</span>
 </a>
 
 <script>
-// Header scroll
+// ── i18n translations ──────────────────────────────────────────────────────
+const translations = {
+  en: {
+    'nav.services': 'Services',
+    'nav.work': 'Work',
+    'nav.about': 'About',
+    'nav.contact': 'Contact',
+    'header.cta': 'Discuss project',
+    'hero.eyebrow': 'KITEREO · Digital Agency · Est. 2022',
+    'hero.line1': 'Digital,',
+    'hero.line2': 'that sells.',
+    'hero.subtitle': 'Video, advertising, design and websites for brands that want to grow. Under one roof — no compromises.',
+    'hero.cta.primary': 'Discuss project',
+    'hero.cta.ghost': 'See our work',
+    'hero.cta.note': 'Response within 24 hours',
+    'hero.stat.projects': 'projects',
+    'hero.stat.countries': 'countries',
+    'hero.stat.available': 'available',
+    'ticker.1': 'Video', 'ticker.2': 'Advertising', 'ticker.3': 'Design',
+    'ticker.4': 'Websites', 'ticker.5': 'Brands', 'ticker.6': 'Content', 'ticker.7': 'Strategy',
+    'services.eyebrow': '01 — Services',
+    'services.headline': 'Full cycle <em>for your brand.</em>',
+    'services.desc': "We cover all digital tasks — from the first idea to launching an ad campaign. You don't need multiple contractors.",
+    's1.title': 'Video & Film',
+    's1.desc': 'Music videos, short films, commercials and brand videos. From script to final edit.',
+    's2.title': 'Social Media Content',
+    's2.desc': 'Reels, Shorts, TikTok, vertical videos. Content that grows reach and sales.',
+    's3.title': 'Targeted Advertising',
+    's3.desc': 'Meta, Google, TikTok, Yandex. We run campaigns in Russia, Europe and beyond.',
+    's4.title': 'Websites',
+    's4.desc': 'Landing pages and multi-page websites on Tilda and Webflow.',
+    's5.title': 'Logos & Branding',
+    's5.desc': 'Identity that works: logo, style, brand guidelines.',
+    's6.title': 'Graphic Design',
+    's6.desc': 'Banners, presentations, packaging, social media kit.',
+    's7.title': 'Not sure where to start?',
+    's7.desc': "Book a free 30-minute consultation. We'll help you create a plan and estimate your budget.",
+    's7.cta': 'Book a call',
+    'about.eyebrow': '02 — About',
+    'about.headline': 'We make digital<br>that <em>feels.</em>',
+    'about.para1': "KITEREO is an independent digital agency focused on brands in Eastern and Central Europe. We've worked with projects in Bosnia, Serbia, Slovenia, Slovakia, Romania, Russia, and with clients from Switzerland, Israel and the USA.",
+    'about.para2': "We don't work in bulk. We choose projects we believe in — and drive them to results. Every frame, every click, every pixel — in its place.",
+    'about.stat1.label': 'Projects delivered',
+    'about.stat2.label': 'Countries',
+    'about.stat3.label': 'Available',
+    'process.eyebrow': '03 — Approach',
+    'process.headline': 'How <em>we work.</em>',
+    'process.desc': 'A transparent 5-step process. No surprises in the invoice or the deadline.',
+    'step1.title': 'Brief', 'step1.desc': 'We meet, discuss the task, goals and expectations. Free of charge.',
+    'step2.title': 'Strategy', 'step2.desc': 'We prepare the concept, work plan, budget and timeline. We align.',
+    'step3.title': 'Production', 'step3.desc': 'We shoot, design, code, launch campaigns. We keep you informed.',
+    'step4.title': 'Launch', 'step4.desc': 'Final revisions, testing, release. We make sure everything works.',
+    'step5.title': 'Results', 'step5.desc': 'Report, analytics, recommendations. We discuss next steps.',
+    'cases.eyebrow': '04 — Work',
+    'cases.headline': 'Selected <em style="font-style: italic; color: transparent; -webkit-text-stroke: 1px var(--text);">projects.</em>',
+    'case1.tag': 'Video', 'case1.title': 'Brand 01 — Music Video',
+    'case1.desc': 'Music video for a Serbian artist, 2M views in a week',
+    'case2.tag': 'Advertising', 'case2.title': 'Brand 02 — Performance',
+    'case2.desc': 'Campaign launch in 5 countries in 30 days, ROAS x4.2',
+    'case3.tag': 'Website + Branding', 'case3.title': 'Brand 03 — Rebrand',
+    'case3.desc': 'Full rebrand and new website for a fintech startup',
+    'case4.tag': 'Content', 'case4.title': 'Brand 04 — Content',
+    'case4.desc': '120 pieces of social media content in one quarter',
+    'cases.all': 'All work',
+    'clients.eyebrow': 'Trusted by',
+    'testimonials.eyebrow': '05 — Testimonials',
+    'testimonials.headline': 'What <em>clients say.</em>',
+    't1.text': "KITEREO did what three previous agencies couldn't. The campaign paid off in the first month.",
+    't1.role': 'CMO · Brand Name',
+    't2.text': 'They produced a video that got 2 million views in a week. True professionals.',
+    't2.role': 'Artist',
+    't3.text': 'Rare case when an agency understands business, not just design.',
+    't3.role': 'CEO · Brand Name',
+    'team.eyebrow': '06 — Team',
+    'team.headline': 'People <em>behind the brand.</em>',
+    'team.desc': 'A small team of specialists with experience in international projects.',
+    'team.name.placeholder': 'First Last',
+    'geo.eyebrow': '07 — Geography',
+    'geo.headline': 'We work <em>worldwide.</em>',
+    'geo.desc': 'Completed projects in 8 countries. The team speaks Russian, English and Serbian.',
+    'geo.primary': 'Primary markets',
+    'geo.additional': 'Additional',
+    'faq.eyebrow': '10 — FAQ',
+    'faq.headline': 'Frequently <em>asked.</em>',
+    'faq.q1': 'How long does a project take?',
+    'faq.a1': "Depends on the task. A landing page — 2–3 weeks. A music video — from 3 weeks to 2 months. An ad campaign launches in 7–14 days. We'll set the exact timeline at the brief.",
+    'faq.q2': 'How much does it cost?',
+    'faq.a2': "The cost depends on the type of service, scope and timeline. Write to us — we'll send an estimate within 24 hours.",
+    'faq.q3': 'How does payment work?',
+    'faq.a3': 'Standard scheme — 50% upfront, 50% upon delivery. For long-term projects — monthly billing. We work under contract with individuals and companies in Russia and the EU.',
+    'faq.q4': 'Can we work remotely?',
+    'faq.a4': "Yes, 90% of work happens online. For shoots, we travel to any country. The team works from several locations in Europe — this speeds up the process.",
+    'faq.q5': 'What languages do you work in?',
+    'faq.a5': 'Russian, English, Serbian. We can bring in specialists for other languages — for example, for ad localization.',
+    'faq.q6': 'I have a small budget — is it worth contacting you?',
+    'faq.a6': "Yes. We'll find a format that works. Sometimes it's better to create one strong piece of content than ten weak ones. Write to us — let's discuss the options.",
+    'faq.q7': 'Are you willing to sign an NDA?',
+    'faq.a7': 'Yes, for all projects with confidential information. We sign the NDA at the start — before any work begins.',
+    'faq.q8': 'What do I need to do to get started?',
+    'faq.a8': "Write to us via the form below or directly by email. At the brief we'll discuss your task and send a proposal within 1–2 days.",
+    'contact.eyebrow': '11 — Contact',
+    'contact.headline': 'Ready to discuss <em>your project?</em>',
+    'contact.desc': "Tell us about your task — we'll send a proposal within 24 hours.",
+    'contact.feat1': 'Free brief',
+    'contact.feat2': 'No obligations',
+    'contact.feat3': 'Response in 24 hours',
+    'form.title': 'Contact us',
+    'form.name.label': "What's your name?",
+    'form.name.placeholder': 'Your name',
+    'form.contact.label': 'Email or Telegram',
+    'form.service.label': 'What service are you interested in?',
+    'form.desc.label': 'Tell us briefly about your project',
+    'form.desc.placeholder': 'A few lines about the task...',
+    'form.consent': 'I agree to the processing of personal data',
+    'form.submit': 'Send',
+    'form.alt': 'Or directly:',
+    'service.opt1': 'Video & Film',
+    'service.opt2': 'Social Media Content',
+    'service.opt3': 'Targeted Advertising',
+    'service.opt4': 'Websites',
+    'service.opt5': 'Branding',
+    'service.opt6': 'Graphic Design',
+    'service.opt7': "Don't know / Other",
+    'footer.brand.desc': 'Full-cycle digital. From idea to result.',
+    'footer.services': 'Services', 'footer.company': 'Company', 'footer.contact': 'Contact',
+    'footer.about': 'About', 'footer.cases': 'Cases', 'footer.contacts': 'Contact',
+    'footer.video': 'Video & Film', 'footer.ads': 'Advertising', 'footer.design': 'Design',
+    'footer.sites': 'Websites', 'footer.branding': 'Branding', 'footer.content': 'Content',
+    'footer.telegram': 'Telegram', 'footer.whatsapp': 'WhatsApp',
+    'sticky.contact': 'Contact',
+    'form.alert': 'Thank you! The form will be connected after deployment. Please email us directly at kitereoagency@gmail.com',
+  },
+  ru: {
+    'nav.services': 'Услуги',
+    'nav.work': 'Работы',
+    'nav.about': 'О нас',
+    'nav.contact': 'Контакты',
+    'header.cta': 'Обсудить проект',
+    'hero.eyebrow': 'KITEREO · Digital Agency · Est. 2022',
+    'hero.line1': 'Digital,',
+    'hero.line2': 'который продаёт.',
+    'hero.subtitle': 'Видео, реклама, дизайн и сайты для брендов, которые хотят расти. Под одной крышей — без компромиссов.',
+    'hero.cta.primary': 'Обсудить проект',
+    'hero.cta.ghost': 'Смотреть работы',
+    'hero.cta.note': 'Ответим в течение 24 часов',
+    'hero.stat.projects': 'проектов',
+    'hero.stat.countries': 'стран',
+    'hero.stat.available': 'на связи',
+    'ticker.1': 'Видео', 'ticker.2': 'Реклама', 'ticker.3': 'Дизайн',
+    'ticker.4': 'Сайты', 'ticker.5': 'Бренды', 'ticker.6': 'Контент', 'ticker.7': 'Стратегия',
+    'services.eyebrow': '01 — Услуги',
+    'services.headline': 'Полный цикл <em>для вашего бренда.</em>',
+    'services.desc': 'Мы закрываем все задачи digital — от первой идеи до запуска рекламной кампании. Вам не нужны несколько подрядчиков.',
+    's1.title': 'Видео и кино',
+    's1.desc': 'Клипы, короткометражки, рекламные ролики и видео для брендов. От сценария до финального монтажа.',
+    's2.title': 'Контент для соцсетей',
+    's2.desc': 'Reels, Shorts, TikTok, вертикальные видео. Контент, который растит охваты и продажи.',
+    's3.title': 'Таргетированная реклама',
+    's3.desc': 'Meta, Google, TikTok, Яндекс. Запускаем кампании в России, Европе и за их пределами.',
+    's4.title': 'Сайты',
+    's4.desc': 'Лендинги и многостраничные сайты на Tilda и Webflow.',
+    's5.title': 'Логотипы и брендинг',
+    's5.desc': 'Айдентика, которая работает: логотип, стиль, гайдлайны.',
+    's6.title': 'Графический дизайн',
+    's6.desc': 'Баннеры, презентации, упаковка, social media kit.',
+    's7.title': 'Не знаете с чего начать?',
+    's7.desc': 'Назначим бесплатную 30-минутную консультацию. Поможем составить план и оценить бюджет.',
+    's7.cta': 'Записаться',
+    'about.eyebrow': '02 — О нас',
+    'about.headline': 'Мы делаем digital,<br>который <em>чувствуется.</em>',
+    'about.para1': 'KITEREO — независимое digital-агентство с фокусом на бренды Восточной и Центральной Европы. Мы работали с проектами в Боснии, Сербии, Словении, Словакии, Румынии, России, а также с заказчиками из Швейцарии, Израиля и США.',
+    'about.para2': 'Мы не делаем массово. Мы выбираем проекты, в которые верим — и доводим их до результата. Каждый кадр, каждый клик, каждый пиксель — на своём месте.',
+    'about.stat1.label': 'Реализованных проектов',
+    'about.stat2.label': 'Стран присутствия',
+    'about.stat3.label': 'На связи с клиентами',
+    'process.eyebrow': '03 — Подход',
+    'process.headline': 'Как <em>мы работаем.</em>',
+    'process.desc': 'Прозрачный процесс из 5 шагов. Никаких сюрпризов в счёте или в дедлайне.',
+    'step1.title': 'Бриф', 'step1.desc': 'Знакомимся, обсуждаем задачу, цели и ожидания. Бесплатно.',
+    'step2.title': 'Стратегия', 'step2.desc': 'Готовим концепцию, план работ, смету и сроки. Согласовываем.',
+    'step3.title': 'Производство', 'step3.desc': 'Снимаем, дизайним, кодим, запускаем рекламу. Держим вас в курсе.',
+    'step4.title': 'Запуск', 'step4.desc': 'Финальные правки, тестирование, релиз. Проверяем, что всё работает.',
+    'step5.title': 'Результат', 'step5.desc': 'Отчёт, аналитика, рекомендации. Обсуждаем дальнейшие шаги.',
+    'cases.eyebrow': '04 — Работы',
+    'cases.headline': 'Избранные <em style="font-style: italic; color: transparent; -webkit-text-stroke: 1px var(--text);">проекты.</em>',
+    'case1.tag': 'Видео', 'case1.title': 'Brand 01 — Music Video',
+    'case1.desc': 'Музыкальный клип для артиста из Сербии, 2 млн просмотров за неделю',
+    'case2.tag': 'Реклама', 'case2.title': 'Brand 02 — Performance',
+    'case2.desc': 'Запуск кампании в 5 странах за 30 дней, ROAS x4.2',
+    'case3.tag': 'Сайт + Брендинг', 'case3.title': 'Brand 03 — Rebrand',
+    'case3.desc': 'Полный ребрендинг и новый сайт для финтех-стартапа',
+    'case4.tag': 'Контент', 'case4.title': 'Brand 04 — Content',
+    'case4.desc': '120 единиц контента для соцсетей за квартал',
+    'cases.all': 'Все работы',
+    'clients.eyebrow': 'Нам доверяют',
+    'testimonials.eyebrow': '05 — Отзывы',
+    'testimonials.headline': 'Что <em>говорят клиенты.</em>',
+    't1.text': 'KITEREO сделали то, что не смогли три предыдущих агентства. Кампания окупилась за первый месяц.',
+    't1.role': 'CMO · Brand Name',
+    't2.text': 'Сняли клип, который собрал 2 млн просмотров за неделю. Профессионалы от и до.',
+    't2.role': 'Артист',
+    't3.text': 'Редкий случай, когда агентство понимает бизнес, а не только дизайн.',
+    't3.role': 'CEO · Brand Name',
+    'team.eyebrow': '06 — Команда',
+    'team.headline': 'Люди <em>за брендом.</em>',
+    'team.desc': 'Небольшая команда специалистов с опытом работы в международных проектах.',
+    'team.name.placeholder': 'Имя Фамилия',
+    'geo.eyebrow': '07 — География',
+    'geo.headline': 'Работаем <em>по всему миру.</em>',
+    'geo.desc': 'Реализованные проекты в 8 странах. Команда говорит на русском, английском и сербском.',
+    'geo.primary': 'Основные рынки',
+    'geo.additional': 'Дополнительно',
+    'faq.eyebrow': '10 — Вопросы',
+    'faq.headline': 'Часто <em>спрашивают.</em>',
+    'faq.q1': 'Сколько времени занимает проект?',
+    'faq.a1': 'Зависит от задачи. Лендинг — 2–3 недели. Музыкальный клип — от 3 недель до 2 месяцев. Рекламная кампания запускается за 7–14 дней. Точный срок согласуем на брифе.',
+    'faq.q2': 'Сколько это стоит?',
+    'faq.a2': 'Стоимость зависит от типа услуги, объёма и сроков. Напишите нам — пришлём ориентировочный расчёт в течение 24 часов.',
+    'faq.q3': 'Как происходит оплата?',
+    'faq.a3': 'Стандартная схема — 50% предоплата, 50% после сдачи. Для долгосрочных проектов — помесячная оплата. Работаем по договору с физическими и юридическими лицами в РФ и ЕС.',
+    'faq.q4': 'Можно ли работать удалённо?',
+    'faq.a4': 'Да, 90% работы происходит онлайн. Для съёмок выезжаем в любую страну. Команда работает из нескольких точек Европы — это ускоряет процесс.',
+    'faq.q5': 'На каких языках вы работаете?',
+    'faq.a5': 'Русский, английский, сербский. Можем подключить специалистов по другим языкам — например, для локализации рекламы.',
+    'faq.q6': 'У меня небольшой бюджет — стоит ли обращаться?',
+    'faq.a6': 'Стоит. Мы найдём формат, который сработает. Иногда лучше сделать одну сильную единицу контента, чем десять слабых. Напишите — обсудим возможности.',
+    'faq.q7': 'Готовы подписать NDA?',
+    'faq.a7': 'Да, для всех проектов с конфиденциальной информацией. NDA подписываем на старте — до начала любых работ.',
+    'faq.q8': 'Что нужно сделать, чтобы начать?',
+    'faq.a8': 'Напишите нам через форму ниже или сразу на email. На брифе обсудим задачу и пришлём предложение в течение 1–2 дней.',
+    'contact.eyebrow': '11 — Контакты',
+    'contact.headline': 'Готовы обсудить <em>ваш проект?</em>',
+    'contact.desc': 'Расскажите о задаче — пришлём предложение в течение 24 часов.',
+    'contact.feat1': 'Бесплатный бриф',
+    'contact.feat2': 'Без обязательств',
+    'contact.feat3': 'Ответ за 24 часа',
+    'form.title': 'Связаться с нами',
+    'form.name.label': 'Как вас зовут?',
+    'form.name.placeholder': 'Ваше имя',
+    'form.contact.label': 'Email или Telegram',
+    'form.service.label': 'Какая услуга интересует?',
+    'form.desc.label': 'Расскажите кратко о проекте',
+    'form.desc.placeholder': 'Несколько строк о задаче...',
+    'form.consent': 'Согласен с обработкой персональных данных',
+    'form.submit': 'Отправить',
+    'form.alt': 'Или напрямую:',
+    'service.opt1': 'Видео и кино',
+    'service.opt2': 'Контент для соцсетей',
+    'service.opt3': 'Таргетированная реклама',
+    'service.opt4': 'Сайты',
+    'service.opt5': 'Брендинг',
+    'service.opt6': 'Графический дизайн',
+    'service.opt7': 'Не знаю / Другое',
+    'footer.brand.desc': 'Полный цикл digital. От идеи до результата.',
+    'footer.services': 'Услуги', 'footer.company': 'Компания', 'footer.contact': 'Связаться',
+    'footer.about': 'О нас', 'footer.cases': 'Кейсы', 'footer.contacts': 'Контакты',
+    'footer.video': 'Видео и кино', 'footer.ads': 'Реклама', 'footer.design': 'Дизайн',
+    'footer.sites': 'Сайты', 'footer.branding': 'Брендинг', 'footer.content': 'Контент',
+    'footer.telegram': 'Telegram', 'footer.whatsapp': 'WhatsApp',
+    'sticky.contact': 'Связаться',
+    'form.alert': 'Спасибо! Форма заработает после деплоя. Напишите нам напрямую: kitereoagency@gmail.com',
+  }
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+
+function switchLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+
+  const t = translations[lang];
+
+  // Update page title & meta
+  const pageTitles = { en: 'KITEREO — Digital that sells', ru: 'KITEREO — Digital, который продаёт' };
+  const pageDescs = {
+    en: 'Full-cycle digital agency. Video, advertising, design, websites for brands that want to grow.',
+    ru: 'Digital-агентство полного цикла. Видео, реклама, дизайн, сайты для брендов, которые хотят расти.'
+  };
+  document.title = pageTitles[lang];
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', pageDescs[lang]);
+
+  // data-i18n: update textContent
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+
+  // data-i18n-html: update innerHTML
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+
+  // data-i18n-placeholder: update placeholder attribute
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (t[key] !== undefined) el.placeholder = t[key];
+  });
+
+  // Update lang switch button active state
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ru').classList.toggle('active', lang === 'ru');
+}
+
+// Apply saved or default language on load
+switchLang(currentLang);
+
+// ── Header scroll ──────────────────────────────────────────────────────────
 const header = document.getElementById('header');
 const stickyCta = document.getElementById('stickyCta');
 const scrollProgress = document.getElementById('scrollProgress');
@@ -1821,7 +2126,7 @@ window.addEventListener('scroll', () => {
   else stickyCta.classList.remove('visible');
 });
 
-// FAQ accordion
+// ── FAQ accordion ──────────────────────────────────────────────────────────
 document.querySelectorAll('.faq-q').forEach(q => {
   q.addEventListener('click', () => {
     const item = q.parentElement;
@@ -1840,7 +2145,7 @@ document.querySelectorAll('.faq-q').forEach(q => {
   });
 });
 
-// Reveal on scroll
+// ── Reveal on scroll ───────────────────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -1852,7 +2157,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
 reveals.forEach(r => observer.observe(r));
 
-// Animate stats numbers
+// ── Animate stats numbers ─────────────────────────────────────────────────
 const animateNum = (el, target) => {
   const isPlus = target.includes('+');
   const isSlash = target.includes('/');
@@ -1882,6 +2187,12 @@ const statObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.5 });
 document.querySelectorAll('.stats').forEach(s => statObserver.observe(s));
+
+// ── Contact form ──────────────────────────────────────────────────────────
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert(translations[currentLang]['form.alert']);
+});
 </script>
 
 </body>
