@@ -1973,12 +1973,31 @@ function renderCases() {
   grid.innerHTML = SITE_CONTENT.cases.map((c, i) => {
     const gradients = ['--gx:70%;--gy:30%', '--gx:20%;--gy:80%', '--gx:80%;--gy:80%', '--gx:30%;--gy:30%'];
     const gStyle = gradients[i % gradients.length];
-    const imgSrc = resolveImageUrl(c.imageUrl);
-    const imageInner = imgSrc
-      ? `<img src="${imgSrc}" alt="${currentLang === 'ru' ? c.titleRu : c.titleEn}" style="width:100%;height:100%;object-fit:cover;">`
-      : `<div class="case-image-content">${currentLang === 'ru' ? c.titleRu : c.titleEn}</div>`;
+    const title = currentLang === 'ru' ? c.titleRu : c.titleEn;
+
+    // Видео имеет приоритет над фото
+    const ytId = c.videoUrl ? extractYoutubeId(c.videoUrl) : null;
+    const imgSrc = ytId
+      ? `https://img.youtube.com/vi/${ytId}/maxresdefault.jpg`
+      : resolveImageUrl(c.imageUrl);
+    const href = c.videoUrl || c.link || '#';
+
+    let imageInner;
+    if (imgSrc) {
+      imageInner = `<img src="${imgSrc}" alt="${title}" style="width:100%;height:100%;object-fit:cover;">`;
+      if (ytId) {
+        imageInner += `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(10,14,26,0.75);border:1px solid rgba(245,245,240,0.3);display:flex;align-items:center;justify-content:center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>`;
+      }
+    } else {
+      imageInner = `<div class="case-image-content">${title}</div>`;
+    }
+
     return `
-      <a href="${c.link}" class="case">
+      <a href="${href}" class="case" ${c.videoUrl ? 'target="_blank" rel="noopener"' : ''}>
         <div class="case-image" style="${gStyle}">
           ${imageInner}
         </div>
@@ -1987,7 +2006,7 @@ function renderCases() {
           <span class="tag">${currentLang === 'ru' ? c.tagRu : c.tagEn}</span>
           <span>${c.year}</span>
         </div>
-        <h3>${currentLang === 'ru' ? c.titleRu : c.titleEn}</h3>
+        <h3>${title}</h3>
         <p class="case-desc">${currentLang === 'ru' ? c.descRu : c.descEn}</p>
       </a>
     `;

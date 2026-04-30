@@ -113,26 +113,41 @@ const SITE_CONTENT = {
   // ===========================================================================
   //  КЕЙСЫ / ПОРТФОЛИО
   //
-  //  Можно добавлять и удалять кейсы (всегда будет чётное число карточек).
-  //  link — ссылка на страницу кейса или на YouTube/Behance.
+  //  Расположение карточек на сайте:
+  //    [ Кейс 1 ]  [ Кейс 2 ]
+  //    [ Кейс 3 ]  [ Кейс 4 ]
+  //  (и так далее — по два в ряд)
+  //
+  //  Можно добавлять и удалять кейсы.
+  //
+  //  ── МЕДИА: ФОТО или ВИДЕО ──────────────────────────────────────────────
+  //
+  //  videoUrl — ссылка на YouTube-видео.
+  //             Если заполнено — показывается превью из YouTube с кнопкой ▶
+  //             и при клике открывается видео. Видео имеет приоритет над фото.
+  //             Пример: "https://youtu.be/dQw4w9WgXcQ"
+  //             Оставьте "" если видео нет.
+  //
+  //  imageUrl — обложка-фото. Три варианта:
+  //
+  //    1. Файл из папки images/ на GitHub:
+  //       imageUrl: "images/project1.jpg"
+  //       (сначала загрузите файл в папку images/ — инструкция в README)
+  //
+  //    2. Google Drive — скопируйте ссылку на файл (доступ: "Все у кого есть ссылка"):
+  //       imageUrl: "https://drive.google.com/file/d/XXXXXXXXXXXXXXX/view"
+  //
+  //    3. Любая прямая ссылка на изображение:
+  //       imageUrl: "https://example.com/photo.jpg"
+  //
+  //    Оставьте "" — будет тёмный градиент-заглушка.
+  //
+  //  link — куда ведёт клик на карточку (если нет видео).
   //         Оставьте "#" если отдельной страницы нет.
-  //
-  //  imageUrl — обложка кейса. Три варианта:
-  //
-  //  1. ФАЙЛ ИЗ ПАПКИ images/ (загрузить файл в папку images/ на GitHub):
-  //     imageUrl: "images/project1.jpg"
-  //
-  //  2. GOOGLE DRIVE (открыть доступ "Все у кого есть ссылка", скопировать ссылку):
-  //     imageUrl: "https://drive.google.com/file/d/XXXXXXXXXXXXXXX/view"
-  //     (сайт сам конвертирует в рабочую ссылку)
-  //
-  //  3. ЛЮБАЯ ПРЯМАЯ ССЫЛКА на изображение из интернета:
-  //     imageUrl: "https://example.com/photo.jpg"
-  //
-  //  Оставьте "" — будет тёмный градиент-заглушка с текстом.
   // ===========================================================================
   cases: [
     {
+      // ── Кейс 1 (верхний левый) ──────────────────────────────────────────
       tagEn:    "Video",
       tagRu:    "Видео",
       year:     "2025",
@@ -140,10 +155,12 @@ const SITE_CONTENT = {
       titleRu:  "Brand 01 — Music Video",
       descEn:   "Music video for a Serbian artist, 2M views in a week",
       descRu:   "Музыкальный клип для артиста из Сербии, 2 млн просмотров за неделю",
-      imageUrl: "",
+      videoUrl: "",   // ← ссылка на YouTube, или "" если нет
+      imageUrl: "",   // ← фото-обложка, или "" если нет
       link:     "#",
     },
     {
+      // ── Кейс 2 (верхний правый) ─────────────────────────────────────────
       tagEn:    "Advertising",
       tagRu:    "Реклама",
       year:     "2025",
@@ -151,10 +168,12 @@ const SITE_CONTENT = {
       titleRu:  "Brand 02 — Performance",
       descEn:   "Campaign launch in 5 countries in 30 days, ROAS x4.2",
       descRu:   "Запуск кампании в 5 странах за 30 дней, ROAS x4.2",
+      videoUrl: "",
       imageUrl: "",
       link:     "#",
     },
     {
+      // ── Кейс 3 (нижний левый) ───────────────────────────────────────────
       tagEn:    "Website + Branding",
       tagRu:    "Сайт + Брендинг",
       year:     "2024",
@@ -162,10 +181,12 @@ const SITE_CONTENT = {
       titleRu:  "Brand 03 — Rebrand",
       descEn:   "Full rebrand and new website for a fintech startup",
       descRu:   "Полный ребрендинг и новый сайт для финтех-стартапа",
+      videoUrl: "",
       imageUrl: "",
       link:     "#",
     },
     {
+      // ── Кейс 4 (нижний правый) ──────────────────────────────────────────
       tagEn:    "Content",
       tagRu:    "Контент",
       year:     "2024",
@@ -173,6 +194,7 @@ const SITE_CONTENT = {
       titleRu:  "Brand 04 — Content",
       descEn:   "120 pieces of social media content in one quarter",
       descRu:   "120 единиц контента для соцсетей за квартал",
+      videoUrl: "",
       imageUrl: "",
       link:     "#",
     },
