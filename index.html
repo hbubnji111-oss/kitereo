@@ -2034,9 +2034,18 @@ function renderFaq() {
   list.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
+      const a = item.querySelector('.faq-a');
       const isOpen = item.classList.contains('open');
-      list.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      // закрываем все
+      list.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = '0';
+      });
+      // открываем кликнутый если он был закрыт
+      if (!isOpen) {
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
     });
   });
 }
@@ -2239,24 +2248,7 @@ window.addEventListener('scroll', () => {
   else stickyCta.classList.remove('visible');
 });
 
-// ── FAQ accordion ──────────────────────────────────────────────────────────
-document.querySelectorAll('.faq-q').forEach(q => {
-  q.addEventListener('click', () => {
-    const item = q.parentElement;
-    const a = item.querySelector('.faq-a');
-    const isOpen = item.classList.contains('open');
-
-    document.querySelectorAll('.faq-item').forEach(i => {
-      i.classList.remove('open');
-      i.querySelector('.faq-a').style.maxHeight = '0';
-    });
-
-    if (!isOpen) {
-      item.classList.add('open');
-      a.style.maxHeight = a.scrollHeight + 'px';
-    }
-  });
-});
+// FAQ accordion — обработчики вешаются в renderFaq() после динамического рендера
 
 // ── Reveal on scroll ───────────────────────────────────────────────────────
 const reveals = document.querySelectorAll('.reveal');
