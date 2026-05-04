@@ -294,7 +294,7 @@ const SITE_CONTENT = {
       descEn:   "Music video for a Serbian artist, 2M views in a week",
       descRu:   "Музыкальный клип для артиста из Сербии, 2 млн просмотров за неделю",
       videoUrl: "",
-      imageUrl: "",
+      imageUrl: "https://github.com/hbubnji111-oss/kitereo/blob/main/images/1.jpg",
       link:     "#",
     },
     {
