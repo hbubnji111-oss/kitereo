@@ -294,7 +294,7 @@ const SITE_CONTENT = {
       descEn:   "Music video for a Serbian artist, 2M views in a week",
       descRu:   "Музыкальный клип для артиста из Сербии, 2 млн просмотров за неделю",
       videoUrl: "",
-      imageUrl: "https://github.com/hbubnji111-oss/kitereo/blob/main/images/1.jpg",
+      imageUrl: "images/1.jpg",
       link:     "#",
     },
     {
@@ -307,7 +307,7 @@ const SITE_CONTENT = {
       descEn:   "Campaign launch in 5 countries in 30 days, ROAS x4.2",
       descRu:   "Запуск кампании в 5 странах за 30 дней, ROAS x4.2",
       videoUrl: "",
-      imageUrl: "",
+      imageUrl: "images/2.jpg",
       link:     "#",
     },
     {
@@ -320,7 +320,7 @@ const SITE_CONTENT = {
       descEn:   "Full rebrand and new website for a fintech startup",
       descRu:   "Полный ребрендинг и новый сайт для финтех-стартапа",
       videoUrl: "",
-      imageUrl: "",
+      imageUrl: "images/4.jpg",
       link:     "#",
     },
     {
