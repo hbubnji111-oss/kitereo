@@ -114,6 +114,7 @@ const SITE_CONTENT = {
     { en: "Video",          ru: "Видео" },
     { en: "Advertising",    ru: "Реклама" },
     { en: "Design / Logo",  ru: "Дизайн / Лого" },
+    { en: "Logo",  ru: "ДЛого" },
     { en: "Websites",       ru: "Сайты" },
     { en: "Rebrand",        ru: "Ребрендинг" },
     { en: "Content",        ru: "Контент" },
